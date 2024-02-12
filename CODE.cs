@@ -46,6 +46,10 @@ namespace Lab02 {
                  : base(name, author, keywords, theme, filePath) {
       this.pageCount = pageCount;
     }
+    public override void GetInfo() {
+      base.GetInfo();
+      Console.WriteLine($"Page count: {pageCount}");
+    }
   }
 
   class MSExcel : Document {
@@ -56,6 +60,11 @@ namespace Lab02 {
       this.row = row;
       this.column = column;
     }
+    public override void GetInfo() {
+      base.GetInfo();
+      Console.WriteLine($"Row count: {row}");
+      Console.WriteLine($"Column count : {column}");
+    }
   }
 
   class TXT : Document {
@@ -65,6 +74,10 @@ namespace Lab02 {
                  : base(name, author, keywords, theme, filePath) {
       this.symbolsCount = symbolsCount;
     }
+    public override void GetInfo() {
+      base.GetInfo();
+      Console.WriteLine($"Symbols count: {symbolsCount}");
+    }
   }
 
   class HTML : Document {
@@ -73,6 +86,10 @@ namespace Lab02 {
     public HTML(string name, string author, string[] keywords, string theme, string filePath, string title)
                  : base(name, author, keywords, theme, filePath) {
       this.title = title;
+    }
+    public override void GetInfo() {
+      base.GetInfo();
+      Console.WriteLine($"Title: {title}");
     }
   }
 
