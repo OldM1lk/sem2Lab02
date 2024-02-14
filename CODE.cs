@@ -110,7 +110,7 @@ class Program {
   static void Main(string[] args) {
     DocumentManager manager = DocumentManager.GetInstance();
     bool isProgramRunning = true;
-    uint userChoice;
+    int userChoice;
 
     while (isProgramRunning) {
       Console.WriteLine("О каком документе вывести информацию? (введите цифру от 1 до 5)");
@@ -123,7 +123,7 @@ class Program {
       Console.WriteLine();
       Console.WriteLine("Ваш выбор: ");
 
-      userChoice = Convert.ToUInt16(Console.ReadLine());
+      userChoice = Convert.ToInt32(Console.ReadLine());
 
       switch (userChoice) {
         case 0:
